@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 50%;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.right-panel {
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+  margin-left: 50%;
+}
+
+
+.white-line {
+  height: 1px;
+  background-color: grey;
+  width: 40px;
+  transition: width 0.3s ease;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: grey;
+}
+
+.nav-link:hover .white-line {
+  width: 80px;
+  background-color: white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.active {
+  color: white;
+}
+
+.active .white-line {
+  width: 80px;
+  background-color: white;
+}
