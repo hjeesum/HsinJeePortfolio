@@ -9,7 +9,7 @@ export default function ListExperience() {
         position={"AI R&D Division"}
         technologies={["ROS2", "C++", "C", "Python", "Computer Vision"]}
         description={
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          "University of Leed's Formula Student AI team, developed autonomous racing systems across perception, simulation, and system integration. Race simulations validated strategies before on-track testing, improving reliability. A vision-based racetrack object detection system enhanced accuracy and real-time performance, while collaborating with the mechanical team ensured alignment with structural and thermal analyses for a competition-ready platform."
         }
         link={"https://leedsgryphonracing.com/"}
       />
@@ -17,9 +17,9 @@ export default function ListExperience() {
         date={{ first: "AUG", end: "SEP", year: "2025" }}
         company={"SRKK"}
         position={"Business Process Automation Intern"}
-        technologies={["HTML", "C++", "C"]}
+        technologies={["Microsoft Azure", "Python", "Copilot Studio", "Power Automate"]}
         description={
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          "Developed a tool to ingest, analyze, and automatically populate company request-for-proposal documents. Enabled semantic understanding across large, unstructured requirement sets, reducing manual review effort and improving accuracy. Structured data extraction and content matching supported automated responses, streamlining the overall RFP workflow."
         }
         link={"https://www.srkk.com/"}
       />
@@ -27,9 +27,9 @@ export default function ListExperience() {
         date={{ first: "JUL", end: "SEP", year: "2024" }}
         company={"EH Integrated Systems"}
         position={"Software Developer Intern"}
-        technologies={["HTML", "C++", "C"]}
+        technologies={["HTML", "CSS", "JavaScript", "MySQL", "Docker"]}
         description={
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          "Built and maintained web applications for clients, ensuring responsive design and cross-browser compatibility. Managed databases with MySQL, optimizing queries for performance. Utilized Docker for containerization, streamlining development and deployment processes."
         }
         link={"https://eh-int.com/"}
       />
