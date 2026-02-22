@@ -2,7 +2,7 @@ function About() {
   return (
     <div className="mb-16">
       <p className="mb-4">
-        Hi! I'm a software engineer with a focus on AI and machine learning,
+        Hii! I'm a software engineer with a focus on AI and machine learning,
         currently completing an integrated master's in Computer Science with
         Artificial Intelligence at the University of Leeds (graduating June
         2026).
