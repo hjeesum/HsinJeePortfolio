@@ -7,7 +7,7 @@ export default function ProjectItem({
   link,
 }) {
   return (
-    <a href={link} className="grid grid-cols-12 gap-2 md:gap-4 duration-200 hover:bg-black/30 hover:opacity-100 group-hover:opacity-60 transition-colors rounded-xl hover:shadow-lg group/experience cursor-pointer">
+    <a href={link} className="grid grid-cols-12 gap-2 md:gap-4 duration-200 hover:bg-black/30 hover:opacity-100 group-hover:opacity-60 transition-colors rounded-xl hover:shadow-lg group/experience cursor-pointer rounded p-2.5 md:p-4 md:-translate-x-4">
       <img
         src="/projectimage.avif"
         className="md:col-span-3 col-span-12 w-full h-auto rounded-md mt-2"
