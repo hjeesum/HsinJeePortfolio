@@ -2,9 +2,9 @@ import RedirectBtn from "./RedirectBtn";
 
 export default function ExperienceItem({ date, company, position, technologies, description, link}) {
   return (
-    <a href={link} className="grid grid-cols-12 gap-2 md:gap-4 duration-200 hover:bg-black/30 hover:opacity-100 group-hover:opacity-60 transition-colors rounded-xl hover:shadow-lg group/experience p-5 cursor-pointer">
+    <a href={link} className="grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-4 duration-200 hover:bg-black/30 hover:opacity-100 group-hover:opacity-60 transition-colors rounded-xl hover:shadow-lg group/experience cursor-pointer">
       <header
-        className="text-[14px] col-span-3 sm:col-span-3 mt-1.25 font-semibold"
+        className="text-[14px] md:col-span-3 sm:col-span-3 mt-0.5 font-semibold opacity-60"
         aria-label="{date.first} - {date.end} {date.year}"
       >
         {date.first} - {date.end} {date.year}

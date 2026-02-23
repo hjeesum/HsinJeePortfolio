@@ -1,6 +1,7 @@
 function About() {
   return (
     <div className="mb-16">
+      <h2 className="text-md font-bold mb-6 md:hidden">ABOUT</h2>
       <p className="mb-4">
         Hi! I'm a software engineer with a focus on AI and machine learning,
         currently completing an integrated master's in Computer Science with

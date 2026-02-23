@@ -2,7 +2,7 @@ import ExperienceItem from "../components/ExperienceItem";
 
 export default function ListExperience() {
   return (
-    <div className="group flex flex-col gap-4 mb-1">
+    <div className="group flex flex-col gap-4 mb-6">
       <ExperienceItem
         date={{ first: "2025", end: "PRESENT", year: "" }}
         company={"Leeds Gryphon Racing"}

@@ -23,7 +23,7 @@ function App() {
         transition: "background 0.1s ease",
       }}
     >
-      <div className="max-w-screen-xl px-12 mx-auto">
+      <div className="max-w-screen-xl md:px-12 px-6 mx-auto">
         <div className="lg:flex lg:justify-between lg:gap-4">
           <header className="lg:sticky top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between pt-20">
             <Home />

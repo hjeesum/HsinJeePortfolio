@@ -2,7 +2,7 @@ import ProjectItem from "../components/ProjectItem";
 
 export default function ListProject() {
   return (
-    <div className="group flex flex-col gap-4 mb-1">
+    <div className="group flex flex-col gap-4 mb-6">
       <ProjectItem
         project={"AI App"}
         technologies={["React", "Node.js", "Express", "MongoDB"]}
