@@ -9,7 +9,7 @@ import Project from "./pages/Project";
 
 function App() {
   return (
-    <div>
+    <div className="bg-slate-900">
       <div className="w-screen min-h-screen">
         <div className="wave-container">
           <div className="wave">
