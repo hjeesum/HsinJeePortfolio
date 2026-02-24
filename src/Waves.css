@@ -26,8 +26,8 @@
 .wave-container .wave span {
   content: "";
   position: absolute;
-  width: 325vh;
-  height: 325vh;
+  width: 325dvh;
+  height: 325dvh;
   top: 0;
   left: 50%;
   transform: translate(-50%, -75%);
@@ -56,6 +56,12 @@
   background: rgba(49, 29, 29, 0.5);
   animation: animate 15s linear infinite;
 }
+@media (max-width: 768px) {
+  .wave-container .wave span {
+    width: 325dvh;
+    height: 425dvh;
+  }
+} 
 @keyframes animate {
   0% {
     transform: translate(-50%, -75%) rotate(0deg);
