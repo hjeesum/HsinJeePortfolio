@@ -36,7 +36,7 @@ function App() {
               <section id="contact">
                 <Contact />
               </section>
-              <section id="footer">
+              <section id="footer" className="pb-20">
                 <Footer />
               </section>
             </div>
