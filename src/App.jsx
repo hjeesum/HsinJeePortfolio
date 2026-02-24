@@ -23,8 +23,8 @@ function App() {
             <header className="lg:sticky top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between pt-20">
               <Home />
             </header>
-            <div className="lg:w-[52%] py-20">
-              <section id="about">
+            <div className="lg:w-[52%]">
+              <section id="about" className="pt-20">
                 <About />
               </section>
               <section id="experience">
