@@ -18,7 +18,7 @@ function Archive() {
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  class="size-4 group-hover:-translate-x-2 transition-transform duration-200"
+                  class="size-4 group-hover:-translate-x-2 transition-transform duration-200 group-hover:text-yellow-400"
                 >
                   <path
                     fill-rule="evenodd"
@@ -26,7 +26,7 @@ function Archive() {
                     clip-rule="evenodd"
                   />
                 </svg>
-                Hsin Jee Sum
+                <span className="group-hover:text-yellow-400">Hsin Jee Sum</span>
               </a>
               <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">Project Archive</h1>
               <table
