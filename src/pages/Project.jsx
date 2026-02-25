@@ -6,7 +6,7 @@ function Project() {
     <div className="mb-16">
       <h2 className="text-md font-bold mb-6 md:hidden">PROJECTS</h2>
       <ListProject />
-      <Link className="group/experience mb-8" to="/archive">
+      <Link className="group/experience mb-8 hidden" to="/archive">
         <a className="inline-flex gap-2 items-center group cursor-pointer font-semibold">
           <span className="group-hover:text-yellow-400">Project Archive</span>
           <svg
