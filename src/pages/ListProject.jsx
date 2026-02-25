@@ -7,7 +7,7 @@ export default function ListProject() {
         project={"Cohere RAG app for research paper"}
         technologies={["Cohere API", "Python", "Docker", "GROBID"]}
         description={
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          "Built an AI assistant using Cohere that implements a RAG pipeline to analyze research papers. The system parses PDFs with Dockerized GROBID, performs intelligent chunking and semantic embedding for similarity search, and delivers context-aware answers through a streamlined CLI interface."
         }
         link={"https://github.com/hjeesum/ResearchPaperSystem"}
         images={["cohere1.jpg", "cohere2.png", "cohere3.png"]}
@@ -16,7 +16,7 @@ export default function ListProject() {
         project={"Hsin Jee Portfolio"}
         technologies={["React", "Vite", "HTML/CSS", "JavaScript"]}
         description={
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          "Portfolio website."
         }
         link={"https://github.com/hjeesum/HsinJeePortfolio"}
         images={["portfolio1.gif"]}
@@ -31,13 +31,13 @@ export default function ListProject() {
         images={["CNN1.png", "CNN2.png", "CNN3.png", "CNN4.png", "CNN5.png"]}
       />
       <ProjectItem
-        project={"Formula Studnet AI"}
-        technologies={["ROS2", "C", "C++", "MongoDB"]}
+        project={"Formula Student AI"}
+        technologies={["ROS2", "C", "C++"]}
         description={
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          "Part of a Formula Student racing team, worked on autonomous systems development, focusing on training and optimizing a YOLOv8-based vision model for real-time racetrack object detection, while contributing to sensor fusion and simulation testing."
         }
         link={"https://github.com/GryphonRacingAI/gra-ros2"}
-        images={["projectimage.avif"]}
+        images={["formula1.png", "formula2.png", "formula3.png"]}
       />
     </div>
   );
