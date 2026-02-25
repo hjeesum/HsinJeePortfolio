@@ -4,10 +4,10 @@ import { useEffect } from "react";
 
 export default function ProjectItem({
   project,
-  technologies,
+  technologies = [],
   description,
   link,
-  images,
+  images = [],
 }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   useEffect(() => {
@@ -22,10 +22,10 @@ export default function ProjectItem({
   return (
     <a
       href={link}
-      className="relative -mx-4 md:-mx-5 rounded-xl hover:shadow-lg duration-200 hover:bg-black/30 hover:opacity-100 group-hover:opacity-60 transition-colors cursor-pointer"
+      className="relative -mx-4 md:-mx-5 rounded-xl hover:shadow-lg duration-200 hover:bg-black/30 hover:opacity-100 group-hover:opacity-60 transition-colors cursor-pointer group/experience"
     >
       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-12.5 p-2.5 md:p-7">
-        <div className="relative col-span-12 md:col-span-3 mt-2 w-full h-[300px] md:w-[131px] md:h-[100px]">
+        <div className="relative col-span-12 md:col-span-3 mt-2 w-full h-[250px] md:w-[131px] md:h-[100px]">
           {images.map((img, index) => (
             <img
               key={index}

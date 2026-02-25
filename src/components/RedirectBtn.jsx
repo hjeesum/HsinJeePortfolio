@@ -1,16 +1,12 @@
 function RedirectBtn({ children }) {
   return (
-    <span
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-flex group/experience items-center gap-2 group-hover/experience:text-yellow-400 transition-colors text-md font-semibold"
-    >
+    <span className="inline-flex group/experience items-center gap-2 group-hover/experience:text-yellow-400 transition-colors text-md font-semibold">
       {children}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="currentColor"
-        className="w-3.5 h-3.5 transition-transform duration-200 group-hover/experience:translate-x-0.5 group-hover/experience:-translate-y-0.5 translate-y-0.5 -translate-x-0.5"
+        className="w-3.5 h-3.5 shrink-0 transition-transform duration-200 group-hover/experience:translate-x-0.5 group-hover/experience:-translate-y-0.5 translate-y-0.5 -translate-x-0.5"
       >
         <path
           fillRule="evenodd"

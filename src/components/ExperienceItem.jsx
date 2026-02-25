@@ -11,7 +11,7 @@ export default function ExperienceItem({
   return (
     <a
       href={link}
-      className="relative -mx-4 md:-mx-5 rounded-xl hover:shadow-lg duration-200 hover:opacity-100 hover:shadow-[0_12px_30px_rgba(0,0,0,0.35)] hover:bg-black/20 group-hover:opacity-60 transition-colors cursor-pointer"
+      className="relative -mx-4 md:-mx-5 rounded-xl hover:shadow-lg duration-200 hover:opacity-100 hover:shadow-[0_12px_30px_rgba(0,0,0,0.35)] hover:bg-black/20 group-hover:opacity-60 transition-colors cursor-pointer group/experience"
     >
       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-4 p-2.5 md:p-7">
         <header

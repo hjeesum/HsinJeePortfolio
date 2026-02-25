@@ -1,15 +1,15 @@
 import ListProject from "./ListProject";
 import RedirectBtn from "../components/RedirectBtn";
-function Project() {
+import { Link } from "react-router-dom";function Project() {
   return (
     <div className="mb-16">
       <h2 className="text-md font-bold mb-6 md:hidden">PROJECTS</h2>
       <ListProject />
-      <a className="group/experience mb-8" href="/resume.pdf">
+      <Link className="group/experience mb-8" to="/archive">
         <RedirectBtn>
           View Full Project Archive{" "}
         </RedirectBtn>
-      </a>
+      </Link>
     </div>
     
   );
