@@ -2,29 +2,32 @@ function About() {
   return (
     <div className="mb-16">
       <h2 className="text-md font-bold mb-6 md:hidden">ABOUT</h2>
-      <p className="mb-4">
+      <p className="mb-4 text-slate-400">
         Hi! I'm a software engineer with a focus on AI and machine learning,
-        currently completing an integrated master's in Computer Science with
-        Artificial Intelligence at the University of Leeds (graduating June
+        currently completing an integrated master's in <span className="text-slate-100 font-semibold">Computer Science with
+        Artificial Intelligence</span> at the <span className="text-slate-100 font-semibold">University of Leeds</span> (graduating June
         2026).
       </p>
-      <p className="mb-4">
-        I love myself a good challenge, and am always looking for opportunities
-        to learn and grow. I'm passionate about using technology to solve
-        real-world problems, and am always looking for ways to make a positive
-        impact on the world. I'm also a big fan of open source software, and am
-        always looking for ways to contribute to the community.
+      <p className="mb-4 text-slate-400">
+        Currently, my Master’s thesis focuses on
+        developing an AI-generated video detection system designed to identify
+        synthetic and manipulated video content. I’m particularly focused on
+        modern text-to-video generation models, including systems such as Sora
+        by OpenAI and Seedance by ByteDance, which are capable of producing
+        highly realistic video from natural language prompts.
       </p>
-      <p className="mb-4">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum
+      <p className="mb-4 text-slate-400">
+        Alongside my academic work at the University of Leeds, I’m also a member
+        of <span className="text-slate-100 font-semibold">Leeds Gryphon Racing</span>, the university’s Formula Student team, where I
+        work on the perception team. In this role, I help develop and train
+        computer vision and machine learning algorithms that enable the car to
+        perceive and understand its environment. This includes working with
+        sensor data, building and training models, and improving the reliability
+        and performance of perception systems in real-world conditions.
+      </p>
+      <p className="mb-4 text-slate-400">
+        Outside of work, I like playing piano, violin and coding random and
+        weird projects (more coming soon!).
       </p>
     </div>
   );

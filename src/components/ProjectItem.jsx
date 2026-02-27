@@ -39,7 +39,7 @@ export default function ProjectItem({
         </div>
         <div className="md:col-span-9 col-span-12">
           <RedirectBtn>{project}</RedirectBtn>
-          <p className="text-[14px] mt-2">{description}</p>
+          <p className="text-[14px] mt-2 text-slate-400">{description}</p>
 
           {technologies.length > 0 && (
             <ul className="flex flex-wrap mt-5 gap-1">
