@@ -1,6 +1,12 @@
 import RedirectBtn from "./RedirectBtn";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useEffect, useMemo, useState } from "react";
+
+const VIDEO_EXTENSIONS = [".mp4", ".webm", ".ogg", ".mov", ".m4v"];
+
+function isVideoFile(fileName = "") {
+  const normalized = fileName.toLowerCase();
+  return VIDEO_EXTENSIONS.some((extension) => normalized.endsWith(extension));
+}
 
 export default function ProjectItem({
   project,
@@ -8,17 +14,35 @@ export default function ProjectItem({
   description,
   link,
   images = [],
+  videos = [],
 }) {
+  const media = useMemo(
+    () => [
+      ...images.map((src) => ({
+        type: isVideoFile(src) ? "video" : "image",
+        src,
+      })),
+      ...videos.map((src) => ({ type: "video", src })),
+    ],
+    [images, videos]
+  );
+
   const [currentIndex, setCurrentIndex] = useState(0);
+
   useEffect(() => {
-    if (images.length <= 1) return;
+    setCurrentIndex(0);
+  }, [media.length]);
+
+  useEffect(() => {
+    if (media.length <= 1) return;
 
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % images.length);
+      setCurrentIndex((prev) => (prev + 1) % media.length);
     }, 2000);
 
     return () => clearInterval(interval);
-  }, [images]);
+  }, [media.length]);
+
   return (
     <a
       href={link}
@@ -26,15 +50,30 @@ export default function ProjectItem({
     >
       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-12.5 p-2.5 md:p-7">
         <div className="relative col-span-12 md:col-span-3 mt-2 w-full h-[250px] md:w-[131px] md:h-[100px]">
-          {images.map((img, index) => (
-            <img
-              key={index}
-              src={`/${img}`}
-              alt={`Project image ${index}`}
-              className={`absolute top-0 left-0 w-full h-full object-fill rounded-md transition-opacity duration-700 ${
-                index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
-              }`}
-            />
+          {media.map((item, index) => (
+            item.type === "video" ? (
+              <video
+                key={`${item.src}-${index}`}
+                src={`/${item.src}`}
+                muted
+                loop
+                playsInline
+                autoPlay
+                preload="metadata"
+                className={`absolute top-0 left-0 w-full h-full object-fill rounded-md transition-opacity duration-700 ${
+                  index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
+                }`}
+              />
+            ) : (
+              <img
+                key={`${item.src}-${index}`}
+                src={`/${item.src}`}
+                alt={`Project image ${index}`}
+                className={`absolute top-0 left-0 w-full h-full object-fill rounded-md transition-opacity duration-700 ${
+                  index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
+                }`}
+              />
+            )
           ))}
         </div>
         <div className="md:col-span-9 col-span-12">

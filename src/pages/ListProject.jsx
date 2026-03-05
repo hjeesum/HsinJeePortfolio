@@ -4,6 +4,15 @@ export default function ListProject() {
   return (
     <div className="group flex flex-col gap-4 mb-6">
       <ProjectItem
+        project={"Real-Time Anime Hand Sign Detection & 3D Animation Engine"}
+        technologies={["MediaPipe", "ThreeJS", "TensorFlowJS"]}
+        description={
+          "Developed a real-time gesture recognition system using TensorFlow.js and MediaPipe. I trained a custom classification model on normalized landmark coordinates to identify iconic Jujutsu Kaisen hand signs, triggering complex Three.js animations powered by Gemini and Codex. Built a Handsign detector."
+        }
+        link={"https://github.com/hjeesum/DomainExpansion"}
+        videos={["JJK.mp4"]}
+      />
+      <ProjectItem
         project={"Cohere RAG app for research paper"}
         technologies={["Cohere API", "Python", "Docker", "GROBID"]}
         description={
