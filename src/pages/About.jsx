@@ -4,12 +4,12 @@ function About() {
       <h2 className="text-md font-bold mb-6 md:hidden">ABOUT</h2>
       <p className="mb-4 text-slate-400">
         Hi! I'm a software engineer with a focus on AI and machine learning,
-        currently completing an integrated master's in <span className="text-slate-100 font-semibold">Computer Science with
-        Artificial Intelligence</span> at the <span className="text-slate-100 font-semibold">University of Leeds</span> (graduating June
+        recently completed an integrated master's in <span className="text-slate-100 font-semibold">Computer Science with
+        Artificial Intelligence</span> at the <span className="text-slate-100 font-semibold">University of Leeds</span> (graduated June
         2026).
       </p>
       <p className="mb-4 text-slate-400">
-        Currently, my Master’s thesis focuses on
+        My Master’s thesis focuses on
         developing an AI-generated video detection system designed to identify
         synthetic and manipulated video content. I’m particularly focused on
         modern text-to-video generation models, including systems such as Sora
