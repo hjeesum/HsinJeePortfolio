@@ -4,7 +4,7 @@ export default function ListExperience() {
   return (
     <div className="group flex flex-col gap-4 mb-6">
       <ExperienceItem
-        date={{ first: "2025", end: "PRESENT", year: "" }}
+        date={{ first: "SEP 2025", end: "JUL", year: "" }}
         company={"Leeds Gryphon Racing"}
         position={"AI R&D Division"}
         technologies={["ROS2", "C++", "C", "Python", "Computer Vision"]}
