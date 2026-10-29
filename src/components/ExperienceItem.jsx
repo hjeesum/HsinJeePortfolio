@@ -8,6 +8,15 @@ export default function ExperienceItem({
   description,
   link,
 }) {
+  // New style: { first: "SEP", firstYear: "2025", end: "JUL", endYear: "2026" }
+  // Old style still works: { first: "JUL", end: "SEP", year: "2024" }
+  const dateText =
+    date.firstYear || date.endYear
+      ? `${date.first} ${date.firstYear ?? date.year ?? ""} - ${date.end} ${date.endYear ?? date.year ?? ""}`
+          .replace(/\s+/g, " ")
+          .trim()
+      : `${date.first} - ${date.end} ${date.year ?? ""}`.trim();
+
   return (
     <a
       href={link}
@@ -16,9 +25,9 @@ export default function ExperienceItem({
       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-4 p-2.5 md:p-7">
         <header
           className="text-[14px] md:col-span-3 sm:col-span-3 mt-0.5 font-semibold opacity-60"
-          aria-label={`${date.first} - ${date.end} ${date.year}`}
+          aria-label={dateText}
         >
-          {date.first} - {date.end} {date.year}
+          {dateText}
         </header>
 
         <div className="col-span-9">

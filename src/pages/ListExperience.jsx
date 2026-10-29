@@ -4,17 +4,17 @@ export default function ListExperience() {
   return (
     <div className="group flex flex-col gap-4 mb-6">
       <ExperienceItem
-        date={{ first: "SEP 2025", end: "JUL 2026", year: "" }}
+        date={{ first: "SEP", firstYear: "2025", end: "JUL", endYear: "2026" }}
         company={"Leeds Gryphon Racing"}
         position={"AI R&D Division"}
         technologies={["ROS2", "C++", "C", "Python", "Computer Vision"]}
         description={
-          "University of Leed's Formula Student AI team, developed autonomous racing systems across perception, simulation, and system integration. Race simulations validated strategies before on-track testing, improving reliability. A vision-based racetrack object detection system enhanced accuracy and real-time performance, while collaborating with the mechanical team ensured alignment with structural and thermal analyses for a competition-ready platform."
+          "University of Leeds' Formula Student AI team, developed autonomous racing systems across perception, simulation, and system integration. Race simulations validated strategies before on-track testing, improving reliability. A vision-based racetrack object detection system enhanced accuracy and real-time performance, while collaborating with the mechanical team ensured alignment with structural and thermal analyses for a competition-ready platform."
         }
         link={"https://leedsgryphonracing.com/"}
       />
       <ExperienceItem
-        date={{ first: "AUG", end: "SEP", year: "2025" }}
+        date={{ first: "AUG", firstYear: "2025", end: "SEP", endYear: "2025" }}
         company={"SRKK"}
         position={"Business Process Automation Intern"}
         technologies={["Microsoft Azure", "Python", "Copilot Studio", "Power Automate"]}
@@ -24,7 +24,7 @@ export default function ListExperience() {
         link={"https://www.srkk.com/"}
       />
       <ExperienceItem
-        date={{ first: "JUL", end: "SEP", year: "2024" }}
+        date={{ first: "JUL", firstYear: "2024", end: "SEP", endYear: "2024" }}
         company={"EH Integrated Systems"}
         position={"Software Developer Intern"}
         technologies={["HTML", "CSS", "JavaScript", "MySQL", "Docker"]}
