@@ -1,8 +1,16 @@
 import ProjectItem from "../components/ProjectItem";
 
 export default function ListProject() {
-  return (
+  return (   
     <div className="group flex flex-col gap-4 mb-6">
+      <ProjectItem
+        project={"Repo Radar: Beginner-Friendly GitHub Issue Finder"}
+        technologies={["Python", "GitHub REST API", "Requests", "uv"]}
+        description={
+          "Built a Python command-line tool that scans the most-starred GitHub repositories through the REST API and surfaces recent, unassigned 'good first issue' tickets. It filters out pull requests, stale threads and heavily discussed issues, authenticates with a token to handle rate limits, and prints a colour-coded, copy-ready list of links. Used it to find an issue in Dify that I submitted three pull requests for."
+        }
+        link={"https://github.com/hjeesum/repo-radar"}
+      />
       <ProjectItem
         project={"Real-Time Anime Hand Sign Detection & 3D Animation Engine"}
         technologies={["MediaPipe", "ThreeJS", "TensorFlowJS"]}
