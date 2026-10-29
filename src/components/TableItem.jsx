@@ -4,16 +4,15 @@ function TableItem({ year, project, made, technologies = [], link }) {
   const techList = Array.isArray(technologies)
     ? technologies
     : [technologies].filter(Boolean);
+  const linkLabel = link.replace(/^https?:\/\//, "");
 
   return (
     <tr className="border-b h-16 border-slate-700 last:border-none">
-      <td className="px-4 py-4 whitespace-nowrap text-slate-400">
-        {year}
-      </td>
+      <td className="px-4 py-4 whitespace-nowrap text-slate-400">{year}</td>
       <td className="px-4 py-4 font-bold sm:table-cell hidden">{project}</td>
       <td className="px-4 py-4 font-bold sm:hidden">
         <a
-          href={"https://" + link}
+          href={link}
           target="_blank"
           rel="noopener noreferrer"
           className="group/experience"
@@ -37,12 +36,12 @@ function TableItem({ year, project, made, technologies = [], link }) {
       </td>
       <td className="px-4 py-4 text-slate-400 sm:table-cell hidden">
         <a
-          href={"https://" + link}
+          href={link}
           target="_blank"
           rel="noopener noreferrer"
           className="group/experience"
         >
-          <RedirectBtn>{link}</RedirectBtn>
+          <RedirectBtn>{linkLabel}</RedirectBtn>
         </a>
       </td>
     </tr>
