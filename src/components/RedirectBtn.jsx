@@ -1,6 +1,6 @@
 function RedirectBtn({ children }) {
   return (
-    <span className="inline-flex group/experience items-center gap-2 group-hover/experience:text-yellow-400 transition-colors text-md font-semibold">
+    <span className="inline-flex group/experience items-center gap-2 group-hover/experience:text-accent transition-colors font-display text-[17px]">
       {children}
       <svg
         xmlns="http://www.w3.org/2000/svg"
