@@ -56,8 +56,8 @@ body {
 
 .reveal {
   opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transform: translateY(40px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
   will-change: opacity, transform;
 }
 
