@@ -10,12 +10,12 @@ function Project() {
         to="/archive"
         className="inline-flex gap-2 items-center group cursor-pointer font-semibold"
       >
-        <span className="group-hover:text-yellow-400">View Full Project Archive</span>
+        <span className="group-hover:text-accent">View Full Project Archive</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
-          className="size-4 group-hover:translate-x-2 transition-transform duration-200 group-hover:text-yellow-400"
+          className="size-4 group-hover:translate-x-2 transition-transform duration-200 group-hover:text-accent"
         >
           <path
             fillRule="evenodd"

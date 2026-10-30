@@ -30,14 +30,6 @@ export default function Footer() {
         >
           Vercel
         </a>
-        . <br />
-        Background code by{" "}
-        <a
-          className="font-medium text-slate-300"
-          href="https://code.visualstudio.com/"
-        >
-          Alison Brunk
-        </a>
         .
       </p>
     </footer>

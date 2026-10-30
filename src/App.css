@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+  --color-accent: #ffb454;
+}
+
 .left-panel {
   display: flex;
   flex-direction: column;
@@ -37,7 +41,7 @@
 
 .nav-link:hover .white-line {
   width: 80px;
-  background-color: white;
+  background-color: var(--accent);
 }
 
 a {
@@ -45,15 +49,15 @@ a {
 }
 
 a:hover {
-  color: white;
+  color: var(--accent);
   text-decoration: none;
 }
 
 .active {
-  color: white;
+  color: var(--accent);
 }
 
 .active .white-line {
   width: 80px;
-  background-color: white;
+  background-color: var(--accent);
 }

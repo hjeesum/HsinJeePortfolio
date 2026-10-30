@@ -26,7 +26,7 @@ function TableItem({ year, project, made, technologies = [], link }) {
           <ul className="flex flex-wrap gap-1">
             {techList.map((technology, i) => (
               <li key={i}>
-                <div className="flex items-center rounded-full bg-yellow-400/10 px-3 py-1 text-xs font-medium text-yellow-300">
+                <div className="flex items-center rounded-sm border border-accent/30 px-2 py-0.5 text-xs text-accent">
                   {technology}
                 </div>
               </li>

@@ -10,11 +10,7 @@ function Archive() {
     <div className="w-screen min-h-screen">
       <div className="lg:py-24">
         <div className="wave-container">
-          <div className="wave">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+          <div className="wave"></div>
           <div className="content-wrapper max-w-screen-xl md:px-12 px-6 mx-auto pt-12 lg:pt-0">
             <div className="max-w-screen-xl mx-auto">
               <Link to="/" className="inline-flex gap-2 items-center group cursor-pointer font-semibold">
@@ -22,7 +18,7 @@ function Archive() {
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  className="size-4 group-hover:-translate-x-2 transition-transform duration-200 group-hover:text-yellow-400"
+                  className="size-4 group-hover:-translate-x-2 transition-transform duration-200 group-hover:text-accent"
                 >
                   <path
                     fillRule="evenodd"
@@ -30,9 +26,9 @@ function Archive() {
                     clipRule="evenodd"
                   />
                 </svg>
-                <span className="group-hover:text-yellow-400">Hsin Jee Sum</span>
+                <span className="group-hover:text-accent">Hsin Jee Sum</span>
               </Link>
-              <h1 className="mt-4 text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">Project Archive</h1>
+              <h1 className="mt-4 text-2xl font-bold tracking-tight text-slate-200 sm:text-4xl md:text-5xl">Project Archive</h1>
               <table className="mt-12 w-full border-collapse text-left">
                 <thead>
                   <tr className="border-b border-slate-700">

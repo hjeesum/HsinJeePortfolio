@@ -46,7 +46,7 @@ export default function ProjectItem({
   return (
     <a
       href={link}
-      className="relative -mx-4 md:-mx-5 rounded-xl hover:shadow-lg duration-200 hover:bg-black/30 hover:opacity-100 group-hover:opacity-60 transition-colors cursor-pointer group/experience"
+      className="relative -mx-4 md:-mx-5 rounded-sm hover:shadow-lg duration-200 hover:bg-black/30 hover:opacity-100 group-hover:opacity-60 transition-colors cursor-pointer group/experience"
     >
       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-12.5 p-2.5 md:p-7">
         <div className="relative col-span-12 md:col-span-3 mt-2 w-full h-[250px] md:w-[131px] md:h-[100px]">
@@ -60,7 +60,7 @@ export default function ProjectItem({
                 playsInline
                 autoPlay
                 preload="metadata"
-                className={`absolute top-0 left-0 w-full h-full object-fill rounded-md transition-opacity duration-700 ${
+                className={`absolute top-0 left-0 w-full h-full object-fill rounded-sm transition-opacity duration-700 ${
                   index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
                 }`}
               />
@@ -69,7 +69,7 @@ export default function ProjectItem({
                 key={`${item.src}-${index}`}
                 src={`/${item.src}`}
                 alt={`Project image ${index}`}
-                className={`absolute top-0 left-0 w-full h-full object-fill rounded-md transition-opacity duration-700 ${
+                className={`absolute top-0 left-0 w-full h-full object-fill rounded-sm transition-opacity duration-700 ${
                   index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
                 }`}
               />
@@ -84,7 +84,7 @@ export default function ProjectItem({
             <ul className="flex flex-wrap mt-5 gap-1">
               {technologies.map((technology, i) => (
                 <li key={i}>
-                  <div className="flex items-center rounded-full bg-yellow-400/10 px-3 py-1 text-xs font-medium text-yellow-300">
+                  <div className="flex items-center rounded-sm border border-accent/30 px-2 py-0.5 text-xs text-accent">
                     {technology}
                   </div>
                 </li>

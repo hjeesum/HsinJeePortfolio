@@ -14,11 +14,7 @@ function Main() {
   return (
     <div className="w-screen min-h-screen">
       <div className="wave-container">
-        <div className="wave">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        <div className="wave"></div>
         <div className="content-wrapper max-w-screen-xl md:px-12 px-6 mx-auto">
           <div className="max-w-screen-xl md:px-12 px-6 mx-auto">
             <div className="lg:flex lg:justify-between lg:gap-4">

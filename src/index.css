@@ -1,10 +1,12 @@
 :root {
-  font-family: 'Inter', system-ui, sans-serif;
-  line-height: 1.5;
+  --accent: #ffb454;
+  --ink: #0a0f16;
+  font-family: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  line-height: 1.6;
   font-weight: 400;
-  color-scheme: light dark;
-  color: #f1f5f9;
-  background-color: #242424;
+  color-scheme: dark;
+  color: #d3dae3;
+  background-color: var(--ink);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -13,6 +15,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 15px;
 }
 
 body {
@@ -24,38 +27,42 @@ body {
   margin-left: auto;
   margin-right: auto;
   overflow-x: hidden;
-  color: #f1f5f9;
-  font-family: 'Inter', system-ui, sans-serif;
+  color: #d3dae3;
+  background-color: var(--ink);
+  font-family: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+::selection {
+  background: var(--accent);
+  color: var(--ink);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.cursor {
+  display: inline-block;
+  width: 0.55ch;
+  height: 0.9em;
+  margin-left: 0.2em;
+  vertical-align: -0.08em;
+  background: var(--accent);
+  animation: blink 1.1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
   }
-  a:hover {
-    color: #747bff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
-  button {
-    background-color: #f9f9f9;
+  .cursor {
+    animation: none;
   }
 }
