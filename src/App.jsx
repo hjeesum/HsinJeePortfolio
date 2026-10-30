@@ -8,6 +8,7 @@ import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import Project from "./pages/Project";
+import Reveal from "./components/Reveal";
 import Archive from "./pages/Archive";
 
 function Main() {
@@ -23,16 +24,24 @@ function Main() {
               </header>
               <div className="lg:w-[52%]">
                 <section id="about" className="pt-20">
-                  <About />
+                  <Reveal>
+                    <About />
+                  </Reveal>
                 </section>
                 <section id="experience">
-                  <Experience />
+                  <Reveal>
+                    <Experience />
+                  </Reveal>
                 </section>
                 <section id="project">
-                  <Project />
+                  <Reveal>
+                    <Project />
+                  </Reveal>
                 </section>
                 <section id="contact">
-                  <Contact />
+                  <Reveal>
+                    <Contact />
+                  </Reveal>
                 </section>
                 <section id="footer" className="pb-20">
                   <Footer />
