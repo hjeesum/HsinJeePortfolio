@@ -4,14 +4,14 @@ import { BrowserRouter } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
 import "./index.css";
 import App from "./App.jsx";
-import ScrollToTop from "./components/ScrollToTop.jsx";
+import ScrollRestore from "./components/ScrollRestore.jsx";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
       <Analytics />
-      <ScrollToTop />
+      <ScrollRestore />
       <App />
     </BrowserRouter>
   </StrictMode>,
