@@ -36,15 +36,15 @@ function Archive() {
               <table className="mt-12 w-full border-collapse text-left">
                 <thead>
                   <tr className="border-b border-slate-700">
-                    <th className="px-4 py-2 text-left font-semibold text-slate-200">Year</th>
-                    <th className="lg:w-[28%] sm:w-[50%] px-4 py-2 text-left font-semibold text-slate-200">Project</th>
-                    <th className="w-[18%] hidden px-4 py-2 text-left font-semibold text-slate-200 lg:table-cell">
+                    <th className="py-4 pr-8 text-sm font-semibold text-slate-200">Year</th>
+                    <th className="py-4 pr-8 text-sm font-semibold text-slate-200">Project</th>
+                    <th className="hidden py-4 pr-8 text-sm font-semibold text-slate-200 lg:table-cell">
                       Made At
                     </th>
-                    <th className="w-[28%] hidden px-4 py-2 text-left font-semibold text-slate-200 lg:table-cell">
+                    <th className="hidden py-4 pr-8 text-sm font-semibold text-slate-200 lg:table-cell">
                       Built With
                     </th>
-                    <th className="lg:w-[26%] hidden px-4 py-2 text-left font-semibold text-slate-200 sm:table-cell">
+                    <th className="hidden py-4 pr-8 text-sm font-semibold text-slate-200 sm:table-cell">
                       Link
                     </th>
                   </tr>

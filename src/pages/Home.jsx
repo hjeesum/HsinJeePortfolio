@@ -3,7 +3,7 @@ import Navigation from "../components/Navigation";
 export default function Home() {
   return (
     <div>
-      <h1 className="font-bold">Hsin Jee Sum</h1>
+      <h1 className="font-bold text-[3.2em] leading-[1.1]">Hsin Jee Sum</h1>
       <h2 className="mt-3 font-semibold">AI/ML Software Engineer</h2>
       <p className="mt-4 max-w-xs text-slate-400"><a href="https://www.leeds.ac.uk/">Univeristy of Leeds</a> '26 Computer Science graduate, aspiring AI/ML and Software engineer.</p>
       <Navigation />
