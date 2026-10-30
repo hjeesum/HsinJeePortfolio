@@ -1,5 +1,18 @@
 @import "tailwindcss";
 
+/* Theme-aware colour utilities (text-ink, border-rule…); the values
+   are the CSS variables in index.css, which flip with data-theme. */
+@theme inline {
+  --color-strong: var(--strong);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-muted: var(--muted);
+  --color-rule: var(--rule);
+  --color-rule-soft: var(--rule-soft);
+  --color-accent: var(--accent);
+}
+
 .left-panel {
   display: flex;
   flex-direction: column;
@@ -22,7 +35,7 @@
 
 .white-line {
   height: 1px;
-  background-color: #9a9a9a;
+  background-color: var(--nav-line);
   width: 32px;
   transition: width 0.3s ease;
 }
@@ -31,7 +44,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  color: #8a8a8a;
+  color: var(--nav-text);
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-size: 12px;
@@ -39,23 +52,161 @@
 
 .nav-link:hover .white-line {
   width: 64px;
-  background-color: #141414;
+  background-color: var(--ink);
 }
 
-a {
-  text-decoration: none;
-}
+/* Default link styles live in the base layer so Tailwind utilities on a
+   specific link (e.g. hover:text-accent) can override them. Unlayered
+   rules here would beat every utility. */
+@layer base {
+  a {
+    text-decoration: none;
+  }
 
-a:hover {
-  color: #000;
-  text-decoration: none;
+  a:hover {
+    color: var(--strong);
+    text-decoration: none;
+  }
 }
 
 .active {
-  color: #141414;
+  color: var(--ink);
 }
 
 .active .white-line {
   width: 64px;
-  background-color: #141414;
+  background-color: var(--accent);
+}
+
+/* Light switch: a cord hanging from the top-right edge, animated in
+   LightSwitch.jsx. Only the bead's hit area takes pointer events so
+   the rest of the box never blocks the page underneath. */
+.light-switch {
+  position: fixed;
+  top: 0;
+  right: clamp(-28px, 4vw - 44px, 12px);
+  z-index: 50;
+  height: 120px;
+  pointer-events: none;
+}
+
+.light-switch__svg {
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+}
+
+.light-switch__cord {
+  fill: none;
+  stroke: var(--nav-line);
+  stroke-width: 1;
+  transition: stroke 0.2s ease;
+}
+
+.light-switch__hit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.light-switch:has(.light-switch__hit:hover) .light-switch__cord {
+  stroke: var(--ink);
+}
+
+/* The bead is the bulb: amber, with a soft breathing glow in dark
+   mode (--glow is 0 in light mode, so the glow disappears there). */
+.light-switch__bead {
+  fill: var(--accent);
+  stroke: var(--accent);
+  stroke-width: 1;
+}
+
+.light-switch__glow-stop {
+  stop-color: var(--accent);
+}
+
+.light-switch__glow {
+  opacity: var(--glow);
+  transition: opacity 0.4s ease;
+  animation: bulb-breathe 3.2s ease-in-out infinite;
+}
+
+.light-switch:has(.light-switch__hit:hover) .light-switch__glow {
+  animation: none;
+  opacity: calc(var(--glow) * 1.6);
+}
+
+@keyframes bulb-breathe {
+  50% {
+    opacity: calc(var(--glow) * 0.55);
+  }
+}
+
+/* The light wash on pull: a warm circle of light that spreads from
+   the bead across the page and fades. The radius is a registered
+   property so the gradient itself can animate. */
+@property --wash-r {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+
+.light-wash {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    circle var(--wash-r) at var(--wash-x) var(--wash-y),
+    var(--wash),
+    transparent
+  );
+  animation: light-wash 1.1s cubic-bezier(0.2, 0.7, 0.3, 1) forwards;
+}
+
+@keyframes light-wash {
+  0% {
+    --wash-r: 0px;
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  100% {
+    --wash-r: 160vmax;
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .light-switch__glow {
+    animation: none;
+  }
+}
+
+/* Sits to the left of the bead so it never runs off the screen edge. */
+.light-switch__label {
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-right: -4px;
+  transform: translateY(-50%);
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--nav-text);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.light-switch__hit:hover .light-switch__label,
+.light-switch__hit:focus-visible .light-switch__label {
+  opacity: 1;
 }

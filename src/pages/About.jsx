@@ -1,34 +1,49 @@
+import Reveal from "../components/Reveal";
+
 function About() {
   return (
     <div className="mb-16">
-      <h2 className="font-display text-2xl mb-6 md:hidden">ABOUT</h2>
-      <p className="mb-4 text-neutral-500">
-        Hi! I'm a software engineer with a focus on AI and machine learning,
-        recently completed an integrated master's in <span className="text-neutral-900 font-semibold">Computer Science with
-        Artificial Intelligence</span> at the <span className="text-neutral-900 font-semibold">University of Leeds</span> (graduated June
-        2026).
-      </p>
-      <p className="mb-4 text-neutral-500">
-        My Master’s thesis focuses on
-        developing an AI-generated video detection system designed to identify
-        synthetic and manipulated video content. I’m particularly focused on
-        modern text-to-video generation models, including systems such as Sora
-        by OpenAI and Seedance by ByteDance, which are capable of producing
-        highly realistic video from natural language prompts.
-      </p>
-      <p className="mb-4 text-neutral-500">
-        Alongside my academic work at the University of Leeds, I’m also a member
-        of <span className="text-neutral-900 font-semibold">Leeds Gryphon Racing</span>, the university’s Formula Student team, where I
-        work on the perception team. In this role, I help develop and train
-        computer vision and machine learning algorithms that enable the car to
-        perceive and understand its environment. This includes working with
-        sensor data, building and training models, and improving the reliability
-        and performance of perception systems in real-world conditions.
-      </p>
-      <p className="mb-4 text-neutral-500">
-        Outside of work, I like playing piano, violin and coding random and
-        weird projects (more coming soon!).
-      </p>
+      <h2 className="font-display text-xl tracking-wide mb-8 flex items-center gap-4 after:h-px after:flex-1 after:bg-rule-soft">ABOUT</h2>
+      <Reveal delay={0}>
+        <p className="mb-4 text-muted">
+          Hi, I'm Hsin Jee. I build machine learning systems, and I've just
+          graduated with a <span className="text-ink font-semibold">First Class</span> integrated
+          master's in <span className="text-ink font-semibold">Computer Science with Artificial
+          Intelligence</span> from the <span className="text-ink font-semibold">University of Leeds</span>.
+        </p>
+      </Reveal>
+      <Reveal delay={120}>
+        <p className="mb-4 text-muted">
+          Most of my work sits where models meet the messy real world: spotting
+          AI-generated video for my thesis, and leading the vision team that
+          helped <span className="text-ink font-semibold">Leeds Gryphon Racing</span>'s
+          driverless car see the track.
+        </p>
+      </Reveal>
+      <Reveal delay={240}>
+        <p className="mb-4 text-muted">
+          I'm happiest when a project is a little ridiculous. I've taught a
+          model to recognise Jujutsu Kaisen hand signs and turned each one into
+          half a million swarming particles, and at DurHack my team predicted
+          Mario Kart races well enough to earn an honourable mention from
+          G-Research.
+        </p>
+      </Reveal>
+      <Reveal delay={360}>
+        <p className="mb-4 text-muted">
+          Away from the keyboard, I play piano and violin, and badminton for
+          Leeds. I grew up speaking English, Mandarin and Cantonese, get by in
+          Malay, and am slowly learning Japanese. At university I also kept the
+          books for the British Chinese Society as its treasurer.
+        </p>
+      </Reveal>
+      <Reveal delay={480}>
+        <p className="mb-4 text-muted">
+          I'm currently looking for roles in{" "}
+          <span className="text-ink font-semibold">ML and software engineering</span>. If
+          that sounds like your team, I'd love to hear from you.
+        </p>
+      </Reveal>
     </div>
   );
 }

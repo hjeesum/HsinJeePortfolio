@@ -1,36 +1,11 @@
 export default function Footer() {
   return (
-    <footer className="max-w-md text-neutral-500 pb-16 sm:pb-0">
+    <footer className="max-w-md text-muted pb-16 sm:pb-0">
       <p>
-        Heavily inspired by{" "}
-        <a
-          className="font-medium text-neutral-800 underline underline-offset-2"
-          href="https://brittanychiang.com/ "
-        >
-          Britrany Chiang
-        </a>,{" "}
-        coded in{" "}
-        <a
-          className="font-medium text-neutral-800 underline underline-offset-2"
-          href="https://code.visualstudio.com/"
-        >
-          Visual Studio Code
-        </a>{" "}
-        by yours truly, built with{" "}
-        <a
-          className="font-medium text-neutral-800 underline underline-offset-2"
-          href="https://code.visualstudio.com/"
-        >
-          Vite
-        </a>{" "}
-        and deployed with{" "}
-        <a
-          className="font-medium text-neutral-800 underline underline-offset-2"
-          href="https://code.visualstudio.com/"
-        >
-          Vercel
-        </a>
-        .
+        Heavily inspired by <span className="font-medium text-ink-2">Brittany Chiang</span>,
+        coded in <span className="font-medium text-ink-2">Visual Studio Code</span> by
+        yours truly, built with <span className="font-medium text-ink-2">Vite</span> and
+        deployed with <span className="font-medium text-ink-2">Vercel</span>.
       </p>
     </footer>
   );

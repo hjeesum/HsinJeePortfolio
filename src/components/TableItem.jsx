@@ -1,48 +1,66 @@
 import RedirectBtn from "./RedirectBtn";
+import SkillTag from "./SkillTag";
+import LinkLabel from "./LinkLabel";
+import SmartLink from "./SmartLink";
 
-function TableItem({ year, project, made, technologies = [], link }) {
+function TableItem({
+  year,
+  project,
+  made,
+  technologies = [],
+  link,
+  linkLabel,
+  extraLinks = [],
+}) {
   const techList = Array.isArray(technologies)
     ? technologies
     : [technologies].filter(Boolean);
-  const linkLabel = link.replace(/^https?:\/\//, "");
 
   return (
-    <tr className="border-b h-16 border-neutral-300 last:border-none">
-      <td className="py-4 pr-8 align-top whitespace-nowrap text-neutral-500">{year}</td>
+    <tr className="border-b h-16 border-rule-soft last:border-none">
+      <td className="py-4 pr-8 align-top whitespace-nowrap text-muted">{year}</td>
       <td className="py-4 pr-8 align-top font-bold sm:table-cell hidden">{project}</td>
       <td className="py-4 pr-8 align-top font-bold sm:hidden">
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group/experience"
-        >
-          <RedirectBtn>{project}</RedirectBtn>
-        </a>
+        {link ? (
+          <SmartLink href={link} className="group/experience">
+            <RedirectBtn>{project}</RedirectBtn>
+          </SmartLink>
+        ) : (
+          project
+        )}
+        {extraLinks.map(({ label, url }) => (
+          <SmartLink
+            key={url}
+            href={url}
+            className="group/experience mt-2 block text-sm font-normal text-muted"
+          >
+            <RedirectBtn><LinkLabel url={url} label={label} /></RedirectBtn>
+          </SmartLink>
+        ))}
       </td>
-      <td className="py-4 pr-8 align-top text-neutral-500 lg:table-cell hidden">{made}</td>
+      <td className="py-4 pr-8 align-top text-muted lg:table-cell hidden">{made}</td>
       <td className="py-4 pr-8 align-top lg:table-cell hidden">
         {techList.length > 0 && (
           <ul className="flex flex-wrap gap-1">
             {techList.map((technology, i) => (
               <li key={i}>
-                <div className="flex items-center rounded-none border border-neutral-400 px-3 py-1 text-xs tracking-wide text-neutral-700">
-                  {technology}
-                </div>
+                <SkillTag>{technology}</SkillTag>
               </li>
             ))}
           </ul>
         )}
       </td>
-      <td className="py-4 pr-8 align-top text-neutral-500 sm:table-cell hidden">
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group/experience"
-        >
-          <RedirectBtn>{linkLabel}</RedirectBtn>
-        </a>
+      <td className="py-4 pr-8 align-top text-muted sm:table-cell hidden">
+        {link && (
+          <SmartLink href={link} className="group/experience">
+            <RedirectBtn><LinkLabel url={link} label={linkLabel} /></RedirectBtn>
+          </SmartLink>
+        )}
+        {extraLinks.map(({ label, url }) => (
+          <SmartLink key={url} href={url} className="group/experience mt-2 block">
+            <RedirectBtn><LinkLabel url={url} label={label} /></RedirectBtn>
+          </SmartLink>
+        ))}
       </td>
     </tr>
   );
