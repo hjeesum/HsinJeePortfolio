@@ -20,24 +20,26 @@
   margin-left: 50%;
 }
 
-
 .white-line {
   height: 1px;
-  background-color: grey;
-  width: 40px;
+  background-color: #9a9a9a;
+  width: 32px;
   transition: width 0.3s ease;
 }
 
 .nav-link {
   display: flex;
   align-items: center;
-  gap: 8px;
-  color: grey;
+  gap: 12px;
+  color: #8a8a8a;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 12px;
 }
 
 .nav-link:hover .white-line {
-  width: 80px;
-  background-color: white;
+  width: 64px;
+  background-color: #141414;
 }
 
 a {
@@ -45,15 +47,15 @@ a {
 }
 
 a:hover {
-  color: white;
+  color: #000;
   text-decoration: none;
 }
 
 .active {
-  color: white;
+  color: #141414;
 }
 
 .active .white-line {
-  width: 80px;
-  background-color: white;
+  width: 64px;
+  background-color: #141414;
 }
