@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 
-// Fades its children in once, when they scroll into view.
-// Respects prefers-reduced-motion by showing them immediately.
+// Fades its children in the first time they scroll into view.
+// Motion (the slide-up) is handled in CSS and removed under
+// prefers-reduced-motion, which keeps a plain opacity fade.
 export default function Reveal({ children, className = "" }) {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
@@ -9,8 +10,7 @@ export default function Reveal({ children, className = "" }) {
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduce) {
+    if (typeof IntersectionObserver === "undefined") {
       setVisible(true);
       return;
     }
@@ -29,8 +29,11 @@ export default function Reveal({ children, className = "" }) {
     return () => observer.disconnect();
   }, []);
 
+  const classes = ["reveal", visible ? "is-visible" : "", className]
+    .filter(Boolean)
+    .join(" ");
   return (
-    <div ref={ref} className={`reveal ${visible ? "is-visible" : ""} ${className}`.trim()}>
+    <div ref={ref} className={classes}>
       {children}
     </div>
   );
