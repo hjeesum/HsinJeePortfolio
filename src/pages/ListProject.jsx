@@ -26,7 +26,8 @@ export default function ListProject() {
         />
       </Reveal>
       <Reveal>
-        {/* No screenshots yet, so the card is text only. */}
+        {/* The email is the top of a real digest, faded at the bottom to
+            fit 16:10; the pipeline diagram is a hand-drawn SVG. */}
         <ProjectItem
           project={"Grady: Visa-Sponsor Graduate Job Finder"}
           technologies={["Python", "SQLite", "rapidfuzz", "GitHub Actions", "pytest"]}
@@ -35,6 +36,8 @@ export default function ListProject() {
           }
           link={"https://github.com/hjeesum/grady"}
           extraLinks={[{ label: "See today's jobs", url: "https://hjeesum.github.io/grady/" }]}
+          images={["grady_email-web.png", "grady_pipeline-web.svg"]}
+          mediaPosition="top"
         />
       </Reveal>
       <Reveal>
