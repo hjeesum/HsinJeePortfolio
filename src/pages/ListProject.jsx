@@ -26,6 +26,18 @@ export default function ListProject() {
         />
       </Reveal>
       <Reveal>
+        {/* No screenshots yet, so the card is text only. */}
+        <ProjectItem
+          project={"Grady: Visa-Sponsor Graduate Job Finder"}
+          technologies={["Python", "SQLite", "rapidfuzz", "GitHub Actions", "pytest"]}
+          description={
+            "Tired of applying to employers who can't sponsor a visa, I built a daily pipeline that reads ~850 careers sites and two job APIs, keeps only UK grad tech jobs from licensed sponsors, and emails what's new. Fuzzy matching against 100,000+ register entries scored 0 false matches on my test set. 198 tests."
+          }
+          link={"https://github.com/hjeesum/grady"}
+          extraLinks={[{ label: "See today's jobs", url: "https://hjeesum.github.io/grady/" }]}
+        />
+      </Reveal>
+      <Reveal>
         <ProjectItem
           project={"Custom CNN model for Breast Cancer Histopathology Images (Bachelor's Thesis)"}
           technologies={["TensorFlow", "Python", "PyTorch", "NumPy"]}

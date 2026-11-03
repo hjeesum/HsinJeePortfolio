@@ -17,6 +17,14 @@ export const archiveProjects = [
   },
   {
     year: "2026",
+    project: "Grady: Visa-Sponsor Graduate Job Finder",
+    made: "Personal project",
+    technologies: ["Python", "SQLite", "rapidfuzz", "GitHub Actions", "pytest"],
+    link: "https://github.com/hjeesum/grady",
+    extraLinks: [{ label: "Live job page", url: "https://hjeesum.github.io/grady/" }],
+  },
+  {
+    year: "2026",
     project: "Phase Transitions and Criticality in Conway's Game of Life",
     made: "University of Leeds",
     technologies: ["Python", "NumPy", "SciPy", "Matplotlib"],
