@@ -32,7 +32,7 @@ export default function ListProject() {
           project={"Grady: Visa-Sponsor Graduate Job Finder"}
           technologies={["Python", "SQLite", "rapidfuzz", "GitHub Actions", "pytest"]}
           description={
-            "Tired of applying to employers who can't sponsor a visa, I built a daily pipeline that reads ~850 careers sites and two job APIs, keeps only UK grad tech jobs from licensed sponsors, and emails what's new. Fuzzy matching against 100,000+ register entries scored 0 false matches on my test set. 198 tests."
+            "Tired of applying to employers who can't sponsor a visa, I built a daily pipeline that reads ~850 careers sites and two job APIs, keeps only UK grad tech jobs from licensed sponsors, and emails what's new. Fuzzy matching against ~140,000 register entries scored 0 false matches on my test set. 198 tests."
           }
           link={"https://github.com/hjeesum/grady"}
           extraLinks={[{ label: "See today's jobs", url: "https://hjeesum.github.io/grady/" }]}
