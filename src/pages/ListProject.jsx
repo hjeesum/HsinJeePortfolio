@@ -80,6 +80,17 @@ export default function ListProject() {
           images={["gameoflife_regime-web.jpg", "gameoflife_stabilisation-web.jpg", "gameoflife_population-web.jpg"]}
         />
       </Reveal>
+      <Reveal>
+        {/* Work in progress, no media yet. */}
+        <ProjectItem
+          project={"Leeds Bus Reliability Tracker"}
+          technologies={["Python", "Docker", "GitHub Actions", "Linux"]}
+          description={
+            "How often does your bus actually turn up? I'm building a tracker for Leeds: so far I've built and deployed a collector that records live bus positions every 15 seconds from the government's open bus data, with automated tests and an alert if it stops recording. It's a work in progress, but in a one-hour sample on 13 Nov 2026, 96% of live positions could be linked to a timetabled journey."
+          }
+          link={"https://github.com/hjeesum/leeds-bus-reliability"}
+        />
+      </Reveal>
     </div>
   );
 }

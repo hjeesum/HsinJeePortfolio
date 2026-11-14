@@ -5,6 +5,13 @@
 export const archiveProjects = [
   {
     year: "2026",
+    project: "Leeds Bus Reliability Tracker",
+    made: "Personal project",
+    technologies: ["Python", "Docker", "GitHub Actions", "Linux"],
+    link: "https://github.com/hjeesum/leeds-bus-reliability",
+  },
+  {
+    year: "2026",
     project: "Automated Methods for AI Video Detection (Master's Thesis)",
     made: "University of Leeds",
     technologies: ["Python", "PyTorch", "Video Swin Transformer", "HPC"],
